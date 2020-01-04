@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<body>
+
+<h2> JavaScript kalkulator </h2>
+<select id="op">
+<option value="sabiranje"> Sabiranje </option>
+<option value="oduzimanje"> Oduzimanje </option>
+<option value="mnozenje"> Množenje </option>
+<option value="deljenje"> Deljenje </optionid="+">
+</select>
+<p>Unesite prvi broj:</p>
+<input type="text" id="br1" name="Broj 1">
+<p>Unesite drugi broj:</p>
+<input type="text" id="br2" name="Broj 2">
+<br>
+<!---<input type="submit" value="Racunaj" onclick="izracunaj()">--->
+<button onclick="izracunaj();">Racunaj</button>
+<p>Rezultat:</p>
+<input type="text"  id="rezultat" value="">
+
+<script>
+function izracunaj(){
+    var br1, br2, rezultat;
+    br1 = parseInt(document.getElementById('br1').value);
+    br2 = parseInt(document.getElementById('br2').value);
+    
+    if(document.getElementById('op').value==='sabiranje'){
+    document.getElementById('rezultat').value=br1+br2;
+    }
+    if(document.getElementById('op').value==='oduzimanje'){
+    document.getElementById('rezultat').value=br1-br2;
+    }   
+    if(document.getElementById('op').value==='mnozenje'){
+    document.getElementById('rezultat').value=br1*br2;
+    }
+    if(document.getElementById('op').value==='deljenje'){
+    document.getElementById('rezultat').value=br1/br2;
+    }
+    rezultat=document.getElementById('rezultat').value;
+}
+</script>
+
+</body>
